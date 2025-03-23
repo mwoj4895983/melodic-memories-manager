@@ -17,13 +17,17 @@ const Index = () => {
             Odkryj dziedzictwo jednego z najwybitniejszych polskich kompozytorów XX wieku
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-              <Music className="mr-2 h-5 w-5" />
-              Muzyka
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
+              <Link to="/muzyka">
+                <Music className="mr-2 h-5 w-5" />
+                Muzyka
+              </Link>
             </Button>
-            <Button variant="outline" size="lg">
-              <FileText className="mr-2 h-5 w-5" />
-              Biografia
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/biografia">
+                <FileText className="mr-2 h-5 w-5" />
+                Biografia
+              </Link>
             </Button>
           </div>
         </div>
@@ -42,7 +46,9 @@ const Index = () => {
               <p className="text-gray-600 mb-4">
                 Jedno z najważniejszych dzieł w dorobku kompozytora, ukończone w 1959 roku.
               </p>
-              <Button variant="outline" className="w-full">Posłuchaj</Button>
+              <Button variant="outline" className="w-full" asChild>
+                <Link to="/muzyka">Posłuchaj</Link>
+              </Button>
             </div>
           ))}
         </div>
@@ -61,7 +67,9 @@ const Index = () => {
               Studiował w Poznaniu i Warszawie, a następnie w Paryżu pod kierunkiem Nadii Boulanger.
               W swojej twórczości łączył elementy muzyki polskiej z nowoczesnymi technikami kompozytorskimi.
             </p>
-            <Button>Pełna Biografia</Button>
+            <Button asChild>
+              <Link to="/biografia">Pełna Biografia</Link>
+            </Button>
           </div>
           <div className="md:w-1/2 bg-gray-200 rounded-xl aspect-w-4 aspect-h-3 flex items-center justify-center">
             <User className="h-16 w-16 text-gray-400" />
@@ -81,7 +89,9 @@ const Index = () => {
             Skontaktuj się z nami!
           </p>
           <div className="flex justify-center">
-            <Button>Strona Kontaktowa</Button>
+            <Button asChild>
+              <Link to="/kontakt">Strona Kontaktowa</Link>
+            </Button>
           </div>
         </div>
       </div>
