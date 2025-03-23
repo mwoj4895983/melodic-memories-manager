@@ -19,7 +19,9 @@ const Biography = () => {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink as={Link} to="/">Strona Główna</BreadcrumbLink>
+              <BreadcrumbLink asChild>
+                <Link to="/">Strona Główna</Link>
+              </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator>
               <ChevronRight className="h-4 w-4" />
